@@ -1,0 +1,172 @@
+name: PowerPlugin
+version: '${project.version}'
+main: me.power16.powerplugin.PowerPlugin
+api-version: 1.18
+authors: [ Power16 ]
+description: Power doing Power things
+
+commands:
+  setintel:
+    aliases:
+      - setitemintel
+      - itemintel
+      - intel
+  ppspawn:
+    description: Spawns a specified mob with special attributes
+    usage: /ppspawn <mob>
+    aliases:
+      - summon
+      - spawn
+      - pps
+
+  trade:
+    description: Initiates a trade with another player.
+    usage: /trade <player>
+
+  amount:
+    description: Set the item in your hand's amount!
+    usage: /amount [1-127]
+
+  armorcolor:
+    description: Set or clear the color of leather armor.
+    usage: /armorcolor [set|clear] {color}
+
+  balance:
+    description: Check your current balance.
+    usage: /balance
+
+  broadcast:
+    description: Broadcast a message to the entire server!
+    usage: /broadcast [message]
+    aliases: [br]
+
+  ci:
+    description: Opens a custom menu for custom items!
+
+  clearspawnpoint:
+    description: Clears your own spawnpoint!
+
+  clearworldspawn:
+    description: Clears the world spawn
+    aliases: [clearspawn]
+
+  day:
+    description: Sets the time of day to noon!
+    usage: /day
+
+  die:
+    description: Kills you!
+    usage: /die
+
+  dupe:
+    description: Duplicates the item in your hand.
+    usage: /dupe [amount]
+
+  enderchest:
+    description: Opens your ender chest
+    usage: /enderchest
+    aliases: [ec, echest, storage]
+
+  gmc:
+    description: Sets your gamemode to creative!
+    usage: /gmc
+
+  god:
+    description: Becomes invincible!
+    usage: /god
+    aliases: [invincible]
+
+  hat:
+    description: Equip the item in your hand as your helmet.
+    usage: /hat
+
+  help:
+    description: Displays this help message.
+
+  invsee:
+    description: Opens another player's inventory
+    usage: /invsee <player>
+
+  lore:
+    description: Modifies the lore of the item in your hand.
+    usage: /lore [add|remove|clear|insert|list] [data]
+
+  meow:
+    description: Sends a meow message to another player.
+    usage: /meow <player>
+
+  money:
+    description: Manage player money
+    usage: /money <player> <add|remove|set> [amount]
+
+  mypermissions:
+    description: Get your in-game permissions!
+    usage: /mypermissions
+
+  nbt:
+    description: Manage NBT data
+    usage: /nbt [get|tell|add]
+
+  nick:
+    description: Set your nickname
+    usage: /nick [nickname|"" to reset]
+
+  night:
+    description: Sets the time of day to midnight!
+    usage: /night
+
+  pay:
+    description: Pay another player a specified amount of money.
+    usage: /pay <player> <amount>
+
+  rarity:
+    description: Set, change, or clear the rarity of an item.
+    usage: /rarity [set|clear|change] [common|uncommon|rare|epic|legendary|divine|special] [type]
+    tab-completer: me.power16.powerplugin.commands.RarityCommand
+
+  rename:
+    description: Rename the item you're holding!
+    usage: /rename [new name]
+
+  repeat:
+    description: Repeat your message back to you!
+    usage: /repeat [message]
+
+  repeatcommand:
+    description: Executes a command multiple times.
+    usage: /repeatcommand <count> [command]
+
+  servermessage:
+    description: Broadcast a server-wide message.
+    aliases: [sm, smsg, msgall]
+
+  setitem:
+    description: Set the item you're holding to a specified item ID.
+    usage: /setitem <minecraft:[item_id]>
+    aliases: [seti, itemset, si]
+
+  setrank:
+    description: Set a player's rank
+    usage: /setrank <player> <rank>
+
+  setserverspawn:
+    description: Sets the server spawn point!
+    usage: /setserverspawn
+    aliases: [sss, setspawn]
+
+  trash:
+    description: Opens a trash bin!
+    usage: /trash
+
+  warpmenu:
+    description: Opens the warp menu!
+    usage: /warpmenu
+    aliases: [warp, wm]
+
+  world:
+    description: World management commands
+    usage: /world <list|tp|create|delete|confirm>
+permissions:
+  admin.breakBlock:
+    default: false
+    description: Use this to be able to break blocks anywhere in the server!
